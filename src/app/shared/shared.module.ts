@@ -5,6 +5,7 @@ import {
     MatButtonModule, MatDialog, MatDialogModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule,
     MatSidenavModule, MatToolbarModule
 } from "@angular/material";
+import {RouterModule} from "@angular/router";
 
 const reExports = [
     BrowserAnimationsModule,
@@ -16,6 +17,7 @@ const reExports = [
     MatListModule,
     MatSidenavModule,
     MatToolbarModule,
+    RouterModule
 ];
 
 @NgModule({
