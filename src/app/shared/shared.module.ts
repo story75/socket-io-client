@@ -7,6 +7,7 @@ import {
 } from "@angular/material";
 import {RouterModule} from "@angular/router";
 import {ChatService} from "./chat.service";
+import {FormsModule} from "@angular/forms";
 
 const reExports = [
     BrowserAnimationsModule,
@@ -17,7 +18,8 @@ const reExports = [
     MatListModule,
     MatSidenavModule,
     MatToolbarModule,
-    RouterModule
+    RouterModule,
+    FormsModule
 ];
 
 @NgModule({
