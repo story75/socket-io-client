@@ -19,7 +19,6 @@ export class UserComponent implements OnInit {
 
     setUser() {
         if (!this.user) return;
-        this.chat.send({event: 'rename', old: this.chat.getUser(), user: this.user});
         this.chat.setUser(this.user);
         this.router.navigate(['/chat']);
     }

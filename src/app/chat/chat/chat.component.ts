@@ -9,6 +9,7 @@ import {ChatService} from "../../shared/chat.service";
 export class ChatComponent implements OnInit {
 
     message = 'I like penguins...';
+    messages = [];
 
     constructor(private chat: ChatService) {
     }
@@ -16,6 +17,10 @@ export class ChatComponent implements OnInit {
     ngOnInit() {
         this.chat.connect();
         this.chat.send({event: 'connect', user: this.chat.getUser()});
+        this.chat.onMessage()
+            .subscribe((msg: any) => {
+                this.messages.push(msg);
+            });
     }
 
     sendMessage() {
