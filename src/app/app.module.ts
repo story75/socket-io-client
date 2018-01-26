@@ -5,6 +5,8 @@ import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
 import {SharedModule} from "./shared/shared.module";
+import {UserModule} from "./user/user.module";
+import {ChatModule} from "./chat/chat.module";
 
 
 @NgModule({
@@ -14,6 +16,8 @@ import {SharedModule} from "./shared/shared.module";
     imports: [
         BrowserModule,
         SharedModule,
+        UserModule,
+        ChatModule,
         AppRoutingModule
     ],
     providers: [],
