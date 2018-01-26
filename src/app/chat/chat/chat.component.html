@@ -1,6 +1,12 @@
 <mat-list-item *ngFor="let message of messages">
-  <p mat-line>
-    {{message | json}}
+  <p mat-line *ngIf="message.event === 'msg'">
+    <strong>{{message.user}}</strong> {{message.msg}}
+  </p>
+  <p mat-line *ngIf="message.event === 'connect'">
+    <strong>{{message.user}}</strong> <em>connected</em>
+  </p>
+  <p mat-line *ngIf="message.event === 'disconnect'">
+    <strong>{{message.user}}</strong> <em>disconnected</em>
   </p>
 </mat-list-item>
 <div>
