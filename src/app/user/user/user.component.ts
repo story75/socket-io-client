@@ -9,12 +9,13 @@ import {Router} from "@angular/router";
 })
 export class UserComponent implements OnInit {
 
-    user = 'Alex';
+    user: string;
 
     constructor(private chat: ChatService, private router: Router) {
     }
 
     ngOnInit() {
+        this.user = this.chat.getUser();
     }
 
     setUser() {
