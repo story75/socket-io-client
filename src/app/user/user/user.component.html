@@ -1,8 +1,8 @@
 <div>
     <mat-form-field>
-        <input matInput placeholder="Tell us your name" value="Alex">
+        <input matInput placeholder="Tell us your name" required [(ngModel)]="user" (keyup.enter)="setUser()">
     </mat-form-field>
-    <a mat-button routerLink="/chat">
+    <a mat-button (click)="setUser()">
         Start chatting!
     </a>
 </div>

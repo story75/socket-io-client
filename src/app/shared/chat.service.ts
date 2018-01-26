@@ -7,10 +7,18 @@ import {Observable} from "rxjs/Observable";
 export class ChatService {
 
     private socket;
+    private user = 'Anon';
 
     constructor() {
     }
 
+    public setUser(user: string): void {
+        this.user = user;
+    }
+
+    public getUser() {
+        return this.user;
+    }
 
     public connect(): void {
         if (!this.socket) {
